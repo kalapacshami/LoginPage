@@ -5,8 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LoginPage"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="LoginWindow" Height="550" Width="800" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+        MouseDown="Window_MouseDown"
+        Background="Transparent"
+        AllowsTransparency="True">
+    
+    <Border CornerRadius="50"
+>
+        <Border.Background>
+            <ImageBrush ImageSource="C:\Users\marce\source\repos\LoginPage\LoginPage\bin\Debug\RPC-JP_Logo.png"
+                        Stretch="Fill"></ImageBrush>
+        </Border.Background>
+        
+    <Border CornerRadius="50"  
+            BorderThickness="10"
+            Opacity="0.94">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#6f2232" Offset="0"></GradientStop>
+                <GradientStop Color="#c3073f" Offset="0.5"></GradientStop>
+                <GradientStop Color="#950740" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#1a1a1d" Offset="0.95"></GradientStop>
+                <GradientStop Color="#4e4e50" Offset="0"></GradientStop>
+            </LinearGradientBrush>
+        </Border.Background>
 
-    </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="25"></ColumnDefinition>
+                        <ColumnDefinition Width="25"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="LOG IN" Foreground="White" FontSize="10" FontFamily="Montserrat" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+                    <Button x:Name="bttnMinimaize" Background="LightGray" BorderThickness="0" Content="-" Foreground="White" FontSize="16" FontFamily="Montserrat" Cursor="Hand" Grid.Column="1" Click="bttnMinimaize_Click"></Button>   
+                        
+                    
+                </Grid>
+            </Grid>
+    </Border>
+    </Border>
 </Window>
