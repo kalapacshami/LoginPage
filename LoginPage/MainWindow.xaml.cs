@@ -35,7 +35,12 @@ namespace LoginPage
 
         private void bttnMinimaize_Click(object sender, RoutedEventArgs e)
         {
+            WindowState = WindowState.Minimized;
+        }
 
+        private void bttnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
